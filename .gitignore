@@ -1,0 +1,22 @@
+# Editor-Files
+/.project
+/.classpath
+/.settings
+/.buildpath
+/.checkstyle
+/nbproject
+
+# Composer-Files
+/composer.lock
+# Editor-Files
+/.project
+/.classpath
+/.settings
+/.buildpath
+/.checkstyle
+/nbproject
+
+# Composer-Files
+/composer.lock
+/composer.phar
+/vendor
