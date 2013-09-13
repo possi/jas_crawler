@@ -143,7 +143,7 @@ class ShopImageCrawler extends ShopCrawler {
     
     protected function downloadImage($target, $url) {
         if (!file_exists($target))
-            file_put_contents($target, $this->client->rawRequest($url));
+            file_put_contents($target, $this->client->get($url));
     }
     
     public function __destruct() {

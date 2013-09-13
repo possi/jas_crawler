@@ -28,6 +28,9 @@ class CurlClient extends Client {
         }
         return $this->_curl;
     }
+    public function get($uri) {
+        return $this->rawRequest(new Request($uri, 'GET'));
+    }
     public function rawRequest(Request $request) {
         $url = $request->getUri();
         $method = strtoupper($request->getMethod());
