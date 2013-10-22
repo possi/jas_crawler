@@ -156,16 +156,20 @@ class CurlClient extends Client {
     const HTTP_CONTENT = 2;
     const HTTP_FULL = 3;
     public function _getRequest($part = self::HTTP_FULL) {
+        $ret = "";
         if ($part & self::HTTP_HEADER)
-            echo $this->_last['ih']."\n";
+            $ret .= $this->_last['ih']."\n";
         if ($part & self::HTTP_CONTENT)
-            echo $this->_last['ic']."\n";
+            $ret .= $this->_last['ic']."\n";
+        return $ret;
     }
     public function _getResponse($part = self::HTTP_FULL) {
+        $ret = "";
         if ($part & self::HTTP_HEADER)
-            echo $this->_last['oh']."\n";
+            $ret .= $this->_last['oh']."\n";
         if ($part & self::HTTP_CONTENT)
-            echo $this->_last['oc']."\n";
+            $ret .= $this->_last['oc']."\n";
+        return $ret;
     }
     public function _printDebug() {
         echo "HTTP-Request:\n";
